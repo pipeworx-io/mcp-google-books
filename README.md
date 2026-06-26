@@ -2,7 +2,7 @@
 
 Google Books MCP
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 965+ live data sources.
 
 ## Tools
 
@@ -10,7 +10,7 @@ Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents 
 |------|-------------|
 | `get_volume` | Volume detail (full title, authors, description, categories, page count, links). |
 | `get_by_isbn` | Convenience: look up a volume by ISBN-10 or ISBN-13. |
-| `list_bookshelf` | Public bookshelf by user id (numeric). |
+| `list_bookshelf` | Fetch the public bookshelves for a Google account (by numeric user_id). Omit shelf to list all public shelves; provide a numeric shelf id to list the volumes on that specific shelf. |
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 965+ data sources:
 
 ```json
 {

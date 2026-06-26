@@ -31,7 +31,7 @@ const tools: McpToolExport['tools'] = [
   {
     name: 'search',
     description:
-      'Full-text search of Google Books. Use search_field to scope (intitle:, inauthor:, subject:, etc).',
+      'AUTHORITATIVE book lookup via Google Books — full-text search across ~40M books. Use for "find books about X", "books by author Y", verifying ISBNs, finding publishers, getting cover images, or pulling structured book metadata an LLM would otherwise have to hallucinate. Returns title, authors, publisher, publish date, description, ISBN, page count, cover thumbnails, language. Use search_field scoping: intitle:, inauthor:, inpublisher:, subject:, isbn:, lccn:, oclc:.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -73,7 +73,7 @@ const tools: McpToolExport['tools'] = [
   },
   {
     name: 'list_bookshelf',
-    description: 'Public bookshelf by user id (numeric).',
+    description: 'Fetch the public bookshelves for a Google account (by numeric user_id). Omit shelf to list all public shelves; provide a numeric shelf id to list the volumes on that specific shelf.',
     inputSchema: {
       type: 'object',
       properties: {
