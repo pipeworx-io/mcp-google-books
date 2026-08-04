@@ -1,16 +1,23 @@
-# mcp-google-books
+# @pipeworx/google-books
 
-Google Books MCP
+Google Books MCP — Books search + volume metadata (~40M+ books). Public reads keyless (1k/day per IP); higher limits with optional key.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 965+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `get_volume` | Volume detail (full title, authors, description, categories, page count, links). |
-| `get_by_isbn` | Convenience: look up a volume by ISBN-10 or ISBN-13. |
-| `list_bookshelf` | Fetch the public bookshelves for a Google account (by numeric user_id). Omit shelf to list all public shelves; provide a numeric shelf id to list the volumes on that specific shelf. |
+- `search(query, search_field?, filter?, language?, print_type?, order_by?, limit?, offset?)`
+- `get_volume(id)` — single volume by Google Books id
+- `get_by_isbn(isbn)` — convenience: lookup by ISBN-10 or ISBN-13
+- `list_bookshelf(user_id, shelf?)` — public bookshelf by user id
+
+## Auth
+
+Optional. Pass `?_apiKey=<key>` for higher rate limits — register at https://console.cloud.google.com/apis/credentials and enable the Books API.
+
+## Data source
+
+`https://www.googleapis.com/books/v1/` — REST + JSON.
 
 ## Quick Start
 
@@ -26,7 +33,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 965+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -50,7 +57,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
