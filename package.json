@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-google-books",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Google Books MCP",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-7e21a4dc4400604d7be82bd8adde3de3ff353f97004c79214420fb3c15a1ad13",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-dfb6e58b80c3e22f81ca5a4a4e401293225290806eadcdab79602eed139c275b",
+    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
   }
 }
