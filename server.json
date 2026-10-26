@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/google-books",
   "title": "Google Books",
   "description": "Google Books MCP",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "websiteUrl": "https://pipeworx.io/packs/google-books",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-google-books",
